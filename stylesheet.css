@@ -1,0 +1,874 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #081b29;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(img/WPP1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+
+    color: #0ef;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+
+.Sobre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.Sobre-img img {
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+
+.sobre-text h2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+
+}
+
+.sobre-text h2 span {
+    color: #0ef;
+}
+
+
+
+
+.sobre-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+
+}
+
+
+.serviços {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+
+}
+
+.sub-titulo {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+
+}
+
+
+
+.sub-titulo span {
+    color: #0ef;
+
+}
+
+
+
+.container {
+    padding: 90px;
+
+}
+
+
+.serviços-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+
+.serviços-list div {
+    background-color: #051129;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290ef;
+    box-shadow: 1px 1px 40px #0053b8f7;
+
+}
+
+
+
+.serviços-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+.serviços-list div h2 {
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+}
+
+.serviços-list a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.Read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef
+}
+
+
+.Read:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.serviços-list div:hover {
+    transform: translateY(-10px);
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+
+}
+
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+
+.bar {
+    font-size: 23px;
+
+}
+
+
+.Tecnicas-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Tecnicas-bars .bar:first-child {
+    margin-top: 0;
+
+}
+
+
+.Tecnicas-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Tecnicas-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Tecnicas-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+.Tecnicas-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+
+}
+
+.bar {
+    font-size: 23px;
+}
+
+
+.Tecnicas-bars .bar {
+    margin-top: 40px;
+
+}
+
+.Tecnicas-bars .bar:first-child {
+    margin-top: 0;
+
+}
+
+
+.Tecnicas-bars .bar:last-child {
+    margin-bottom: 0;
+
+}
+
+.Tecnicas-bars .bar .info {
+    margin-bottom: 5px;
+
+}
+
+
+.Tecnicas-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+.Tecnicas-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Tecnicas-bars .bar .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+
+
+
+/* Ajustes no título */
+.heading1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #00eeff;
+}
+
+/* Estilo para a seção de habilidades técnicas */
+.Tecnicas-bars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    position: relative;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-container i {
+    font-size: 24px;
+}
+
+.level-line {
+    position: absolute;
+    height: 4px;
+    background-color: #00eeff;
+    /* Cor da linha azul */
+    width: 0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: width 1s ease-in-out;
+}
+
+.html-level {
+    width: 80%;
+    /* Ajuste a largura conforme o nível de conhecimento */
+}
+
+.css-level {
+    width: 70%;
+}
+
+.js-level {
+    width: 60%;
+}
+
+.python-level {
+    width: 90%;
+}
+
+.react-level {
+    width: 50%;
+}
+
+.info {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    /* Cor do fundo da linha de progresso */
+    margin-top: 5px;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    width: 0;
+    /* Ajuste a largura para mostrar o progresso */
+    background-color: #00eeff;
+    transition: width 1s ease-in-out;
+}
+
+.html span {
+    width: 80%;
+    /* Ajuste o progresso conforme o nível */
+}
+
+.css span {
+    width: 70%;
+}
+
+.javascript span {
+    width: 60%;
+}
+
+.python span {
+    width: 90%;
+}
+
+.react span {
+    width: 50%;
+}
+
+
+.projetos .interface .flex {
+    display: flex;
+    gap: 20px;
+    /* Espaço entre os projetos */
+}
+
+.img-port {
+    width: 300px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 200px;
+    /* Ajuste o tamanho conforme necessário */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    /* Borda arredondada opcional */
+    overflow: hidden;
+}
+
+.img-port .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+
+
+
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+.Tecnicas-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+
+
+/* Estilo para a seção portofolio */
+.portofolio {
+    text-align: center;
+    /* Centraliza o texto dentro da seção */
+    padding: 50px 10%;
+    /* Ajusta o padding da seção */
+}
+
+/* Estilo para o container da interface */
+.interface {
+    display: flex;
+    flex-direction: column;
+    /* Alinha o conteúdo verticalmente */
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+    width: 100%;
+    /* Garante que o container ocupe a largura total */
+    max-width: 1200px;
+    /* Define uma largura máxima, se necessário */
+    margin: 0 auto;
+    /* Centraliza o container se uma largura máxima for definida */
+}
+
+/* Estilo para o título */
+.sub-titulo {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.sub-titulo span {
+    color: #0ef;
+}
+
+/* Estilo para o container de projetos */
+.flex {
+    display: flex;
+    gap: 20px;
+    /* Espaço entre os projetos */
+    justify-content: center;
+    /* Centraliza os projetos horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que os projetos se movam para a próxima linha, se necessário */
+}
+
+/* Estilo para os projetos individuais */
+.img-port {
+    width: 300px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 200px;
+    /* Ajuste o tamanho conforme necessário */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    /* Borda arredondada opcional */
+    overflow: hidden;
+}
+
+section.projetos {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1f;
+
+}
+
+section.projetos .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ab;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+
+section.formulario {
+    padding: 80px 4%;
+    margin-top: 40px;
+    /* Adiciona margem acima do formulário */
+    margin-bottom: 40px;
+    /* Adiciona margem abaixo do formulário */
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    /* Aumenta o espaçamento entre os elementos do formulário */
+    margin-top: 40px;
+}
+
+/* Estilo para a fonte retangular com as pontas dobradas */
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #0ef;
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+ h4{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+h4 span{
+    color: #0ef;
+}
+ 
+
+/* Estilo padrão para desktop */
+body {
+    font-size: 16px;
+  }
+  
+  /* Estilo para telas menores que 768px (tablets e smartphones) */
+  @media (max-width: 900px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilo para telas menores que 480px (smartphones pequenos) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+
+
+ 
+  
+  
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
